@@ -1,11 +1,9 @@
-
 from tkinter import*
 var=Tk()
 var.geometry("320x390")
 var.minsize(320,390)
-var.maxsize(320,390)
 Label(var,text="factorial",bg="black",fg="white",font= ("conicasansms",14,"bold"),borderwidth=10,relief= SUNKEN).pack(side = TOP,fill=X)
-frame = Frame(var,bg = "light blue",width=460,height=460)
+frame = Frame(var)
 def fact():
     ft = int(t.get("1.0","end-1c"))
     if ft == 0 or ft == 1:
@@ -15,7 +13,6 @@ def fact():
         result = 1
         for i in range(1,ft+1):
             result = result*i
-        # result = str(result)
         t1.delete("1.0", "end-1c")
         t1.insert(END,result)
 def delete():
