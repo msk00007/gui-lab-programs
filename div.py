@@ -1,4 +1,4 @@
-from cgitb import text
+
 from tkinter import*
 root = Tk()
 root.title("Division")
