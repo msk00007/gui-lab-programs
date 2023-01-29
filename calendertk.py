@@ -1,9 +1,8 @@
 from tkinter import *
 from datetime import date,datetime
 root = Tk()
-root.geometry("640x640")
-root.minsize(800,640)
-# root.maxsize(640,640)
+root.geometry("800x620")
+root.minsize(800,620)
 titleframe = Frame(root,bg="sky blue",width=640)
 titleframe.pack(fill=BOTH)
 Label(titleframe,text="Enter year : ",font=("Times","16","bold"),bg="sky blue",width=10,height=3).pack(side=LEFT)
@@ -84,6 +83,6 @@ for i in range(10):
         labelname = Label(gridtable,text=" ",font=("Times","11","bold"),width=7,height=2,relief=SOLID,borderwidth=1)
         labelname.grid(row=i,column=j)
         mycal[i][j]=labelname
-finalframe = Frame(root,bg="sky blue",width=100,height=90)
+finalframe = Frame(root,bg="sky blue",width=100,height=180)
 finalframe.pack(fill=BOTH)
 root.mainloop()
