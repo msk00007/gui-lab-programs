@@ -13,7 +13,6 @@ def getcal():
     for i in range(10):
         for j in range(12):
             mycal[i][j].config(text=" ")
-    mycal
     weekdays = {6:"Sun",0:"Mon",1:"Tue",2:"Wed",3:"Thu",4:"Fri",5:"Sat"}
     months = {1:"JAN",2:"FEB",3:"MAR",4:"APR",5:"MAY",6:"JUN",7:"JUL",8:"AUG",9:"SEP",10:"OCT",11:"NOV",12:"DEC"}
     myyear = int(y.get())
@@ -56,18 +55,16 @@ def getcal():
                 while mycal[k][j].cget("text")!=" ":
                     k+=1
                 mycal[k][j].config(text = months.get(n))
-                if j<8:
+                if n==1 or n==3 or n==5 or n==7 or n==8 or n==10 or n==12:
                     mycal[k][j].config(fg="red")
-                if j==8 and k == 0:
-                    mycal[k][j].config(fg="violet")
-                elif  j==8 and k == 1:
-                    mycal[k][j].config(fg="red")
-                elif j == 8 and k == 2:
-                    mycal[k][j].config(fg="light green")
-                elif j>8 and k == 0:
-                    mycal[k][j].config(fg="light green")
+                elif  n==2:
+                    if myyear%4 ==0 and myyear%100 != 0 or myyear%400 == 0:
+                        mycal[k][j].config(fg="light green")
+                    else:
+                        mycal[k][j].config(fg="violet")
                 else:
-                    mycal[k][j].config(fg="red")
+                    mycal[k][j].config(fg="light green")
+
 
 
 
