@@ -21,3 +21,4 @@ Label(var,text="Result",bg="black",fg="white",font= ("conicasansms",14,"bold"),b
 t1 = Text(var,bg="light green",font="Courior 14 bold",width=15,height=4.5,borderwidth=5,relief=SUNKEN)
 t1.pack(side = TOP,fill=X)
 var.mainloop()
+# adding comment
