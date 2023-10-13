@@ -22,3 +22,4 @@ t1 = Text(var,bg="light green",font="Courior 14 bold",width=15,height=4.5,border
 t1.pack(side = TOP,fill=X)
 var.mainloop()
 # adding comment
+#adding it from git hub
